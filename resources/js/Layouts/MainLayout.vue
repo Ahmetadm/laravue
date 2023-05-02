@@ -3,17 +3,17 @@
     <Link href="/">Home</Link>
     <Link href="/listing">Listing</Link>
   </nav>
-    <div v-if="flashSuccess" class="success">
-    {{flashSuccess}}
-</div>
+  <div v-if="flashSuccess" class="success">
+    {{ flashSuccess }}
+  </div>
   <slot />
 </template>
 
 <script setup>
 import {Link,usePage} from '@inertiajs/vue3'
-import {computed} from "vue";
+import {computed} from 'vue'
 
-const page=usePage();
+const page=usePage()
 const flashSuccess=computed(()=>page.props.flash.success)
 
 
