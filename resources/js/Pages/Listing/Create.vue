@@ -11,11 +11,12 @@ const form=useForm({
   street_nr:null,
   price:0,
 })
-console.log(form)
+
+const create=()=>form.post(route('listing.store'))
 
 </script>
 <template>
-  <form @submit.prevent="form.post('/listing/')">
+  <form @submit.prevent="create">
     <div>
       <div>
         <label>Beds</label>

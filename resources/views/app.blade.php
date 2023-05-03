@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravue</title>
+        @routes
         @vite('resources/js/app.js')
         @inertiaHead
     </head>
-    <body>
+    <body class=" bg-white text-gray-800     dark:bg-gray-900 dark:text-gray-100 ">
     @inertia
     </body>
 </html>

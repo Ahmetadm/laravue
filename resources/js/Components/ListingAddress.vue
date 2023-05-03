@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <h3>Price : {{ listing.price }} $</h3>
-    <p>{{ listing.street }} No: {{ listing.street_nr }}, {{ listing.city }}</p>
-  </div>
-  <Link :href="`/listing/${listing.id}/edit`"> Edit</Link>
+  <span>
+    {{ listing.street }} {{ listing.street_nr }}, {{listing.city }}
+  </span>
 </template>
 <script setup>
-import {Link} from '@inertiajs/vue3'
+
 defineProps({
   listing:{
     type:Object,
@@ -14,6 +12,4 @@ defineProps({
 })
 </script>
 
-<style scoped>
 
-</style>
